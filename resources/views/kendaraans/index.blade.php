@@ -21,7 +21,7 @@
     <table class="table table-bordered table-hover ">
         <tr>
             <th>No</th>
-            <th>Plat Kendaraan</th>
+            <th>Nomor Plat Kendaraan</th>
             <th>Merk Kendaraan</th>
             <th>Tipe Kendaraan</th>
             <th width="280px">Action</th>
