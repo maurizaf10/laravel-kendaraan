@@ -8,6 +8,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('kendaraans.create') }}"> Tambah Data</a>
+                <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
             </div>
         </div>
     </div>
@@ -21,7 +22,7 @@
     <table class="table table-bordered table-hover ">
         <tr>
             <th>No</th>
-            <th>Plat Kendaraan</th>
+            <th>Nomor Plat Kendaraan</th>
             <th>Merk Kendaraan</th>
             <th>Tipe Kendaraan</th>
             <th width="280px">Action</th>
