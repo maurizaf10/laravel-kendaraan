@@ -37,15 +37,17 @@ class KendaraanController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {              
         $request->validate([
             'plat' => 'required',
             'merk' => 'required',
-            'tipe' => 'required',
+            'tipe' => 'required',                        
         ]);
-    
+        
+                 
+            
         Kendaraan::create($request->all());
-     
+        
         return redirect()->route('kendaraans.index')
                         ->with('success','Kendaraan created successfully.');
     }
@@ -106,4 +108,7 @@ class KendaraanController extends Controller
         return redirect()->route('kendaraans.index')
                         ->with('success','Kendaraan deleted successfully');
     }
+
+    
+      
 }

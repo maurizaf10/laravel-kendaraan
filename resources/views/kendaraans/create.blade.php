@@ -23,13 +23,12 @@
     </div>
 @endif
    
-<form action="{{ route('kendaraans.store') }}" method="POST">
-    @csrf
-  
+<form action="{{ route('kendaraans.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf 
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Plat Kendaraan :</strong>
+                <strong>Nomor Plat Kendaraan :</strong>
                 <input type="text" name="plat" class="form-control" placeholder="Plat">
             </div>
         </div>
@@ -45,9 +44,15 @@
                 <input type="text" name="tipe" class="form-control" placeholder="Tipe">
             </div>
         </div>        
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group ">                
+                <input type="file" name="path">            
+            </div>
+        </div>        
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>                
         </div>
+        
     </div>
    
 </form>

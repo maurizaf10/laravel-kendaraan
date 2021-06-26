@@ -8,6 +8,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('kendaraans.create') }}"> Tambah Data</a>
+                <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
             </div>
         </div>
     </div>
@@ -21,9 +22,10 @@
     <table class="table table-bordered table-hover ">
         <tr>
             <th>No</th>
-            <th>Plat Kendaraan</th>
+            <th>Nomor Plat Kendaraan</th>
             <th>Merk Kendaraan</th>
-            <th>Tipe Kendaraan</th>
+            <th>Tipe Kendaraan</th>            
+            <th>Foto Kendaraan</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($kendaraans as $kendaraan)
@@ -31,10 +33,12 @@
             <td>{{ ++$i }}</td>
             <td>{{ $kendaraan->plat }}</td>
             <td>{{ $kendaraan->merk }}</td>
-            <td>{{ $kendaraan->tipe }}</td>
+            <td>{{ $kendaraan->tipe }}</td>            
+            <td></td>
             <td>
                 <form action="{{ route('kendaraans.destroy',$kendaraan->id) }}" method="POST">                       
-                    <a class="btn btn-primary" href="{{ route('kendaraans.edit',$kendaraan->id) }}">Edit</a>   
+                    <a class="btn btn-primary" href="{{ route('kendaraans.edit',$kendaraan->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="">Download</a>   
                     @csrf
                     @method('DELETE')      
                     <button type="submit" class="btn btn-danger">Delete</button>

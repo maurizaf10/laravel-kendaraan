@@ -10,6 +10,6 @@ class Kendaraan extends Model
     use HasFactory;
 
     protected $fillable = [
-        'plat', 'merk', 'tipe'
+        'plat', 'merk', 'tipe','name','path',
     ];
 }

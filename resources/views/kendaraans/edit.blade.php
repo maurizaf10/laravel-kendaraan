@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Product</h2>
+                <h2>Edit Data Kendaraan</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('kendaraans.index') }}"> Back</a>
@@ -30,19 +30,19 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Plat:</strong>
+                    <strong>Nomor Plat Kendaraan :</strong>
                     <input type="text" name="plat" value="{{ $kendaraan->plat }}" class="form-control" placeholder="Plat">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Merk:</strong>
+                    <strong>Merk Kendaraan :</strong>
                     <input type="text" name="merk" value="{{ $kendaraan->merk }}" class="form-control" placeholder="Merk">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Tipe:</strong>
+                    <strong>Tipe Kendaraan :</strong>
                     <input type="text" name="tipe" value="{{ $kendaraan->tipe }}" class="form-control" placeholder="Tipe">
                 </div>
             </div>

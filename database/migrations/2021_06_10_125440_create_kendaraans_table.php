@@ -18,8 +18,11 @@ class CreateKendaraansTable extends Migration
             $table->string('plat');
             $table->string('merk');
             $table->string('tipe');
+            $table->string('name');
+            $table->string('path');
             $table->timestamps();
         });
+        
     }
 
     /**
