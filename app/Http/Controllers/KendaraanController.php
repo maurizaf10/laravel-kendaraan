@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Kendaraan;
 use Illuminate\Http\Request;
 
@@ -108,7 +107,7 @@ class KendaraanController extends Controller
         return redirect()->route('kendaraans.index')
                         ->with('success','Kendaraan deleted successfully');
     }
-
+     
     
       
 }

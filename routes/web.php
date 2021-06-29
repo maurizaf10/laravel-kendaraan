@@ -15,4 +15,5 @@ Route::post('register', [AuthController::class, 'register']);
 Route::group(['middleware' => 'auth'], function () {    
     Route::resource('kendaraans', KendaraanController::class);
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+    
 });

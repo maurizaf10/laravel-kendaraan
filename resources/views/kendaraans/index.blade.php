@@ -1,13 +1,5 @@
-@extends('kendaraans.layout')
-
-
- 
-@section('content')
-
-    
-
-
-
+@extends('kendaraans.layout') 
+@section('content') 
     <div class="row">
         <div class="col-lg-12 margin-tb ">
             <div class="pull-left">
@@ -15,6 +7,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('kendaraans.create') }}"> Tambah Data</a>
+                <a class="btn btn-info" href=""> Cetak</a>
                 <a href="{{ route('logout') }}" class="btn btn-danger">Logout</a>
             </div>
         </div>
