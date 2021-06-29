@@ -46,6 +46,11 @@
                     <input type="text" name="tipe" value="{{ $kendaraan->tipe }}" class="form-control" placeholder="Tipe">
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">                  
+                    <input type="file" name="path" class="form-control" value="{{$kendaraan->path}}"  placeholder="">
+                </div>
+            </div>
             
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">Submit</button>

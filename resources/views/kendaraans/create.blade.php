@@ -46,7 +46,7 @@
         </div>        
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group ">                
-                <input type="file" name="path">            
+                <input type="file" name="path" class="form-control" id="path">            
             </div>
         </div>        
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Kendaraan extends Model
 {
     use HasFactory;
-
+    protected $table = "kendaraans";
+    protected $primaryKet = "id";
     protected $fillable = [
         'plat', 'merk', 'tipe','path'
     ];

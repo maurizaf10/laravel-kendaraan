@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use App\Models\Kendaraan;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Cloudinary;
 
 class KendaraanController extends Controller
 {
@@ -13,9 +15,15 @@ class KendaraanController extends Controller
      */
     public function index()
     {
-        $kendaraans = Kendaraan::latest()->paginate(5);
+        $kendaraans = Kendaraan::latest()->paginate(10);
     
         return view('kendaraans.index',compact('kendaraans'));            
+    }
+
+    public function cetak(){
+        $kendaraans= Kendaraan::latest()->get();
+        return view('kendaraans.cetak',compact('kendaraans')); 
+
     }
 
     /**
@@ -41,11 +49,9 @@ class KendaraanController extends Controller
             'merk' => 'required',
             'tipe' => 'required',                        
         ]);
-        
-                 
-            
-        Kendaraan::create($request->all());
-        
+         
+        Kendaraan::create($request->all());   
+       
         return redirect()->route('kendaraans.index')
                         ->with('success','Kendaraan created successfully.');
     }
@@ -67,8 +73,8 @@ class KendaraanController extends Controller
      * @param  \App\Models\Kendaraan  $kendaraan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kendaraan $kendaraan)
-    {
+    public function edit(Kendaraan $kendaraan)    {
+                
         return view('kendaraans.edit',compact('kendaraan'));
     }
 
@@ -88,7 +94,7 @@ class KendaraanController extends Controller
         ]);
     
         $kendaraan->update($request->all());
-    
+
         return redirect()->route('kendaraans.index')
                         ->with('success','Kendaraan updated successfully');
     }
@@ -100,12 +106,14 @@ class KendaraanController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Kendaraan $kendaraan)
-    {
-        $kendaraan->delete();
+    {        
+        $kendaraan->delete();       
     
         return redirect()->route('kendaraans.index')
                         ->with('success','Kendaraan deleted successfully');
     }
+
+    
      
     
       
